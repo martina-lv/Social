@@ -1,0 +1,191 @@
+html,
+body {
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.friends {
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  background: #009788;
+  padding: 10px 0;
+}
+
+.friends img {
+  width: 35px;
+  /* padding: 10px; */
+  background: white;
+  border-radius: 100%;
+}
+
+.friends p {
+  margin: 0;
+}
+
+.friendCard {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 150px;
+  /* padding: 20px 10px; */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+  font-weight: bold;
+  background: #e0f2f2;
+  border-radius: 5px;
+}
+
+/* MESSAGGI */
+/* ADDMESSAGE */
+.add-new-message {
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 6px;
+  padding: 20px 20px 0 20px;
+}
+.input-text {
+  width: 375px;
+}
+.add-new-message-btn {
+  background-color: #009788;
+  color: #e0f2f2;
+}
+.messages {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  background: #e0f2f2;
+}
+.filter {
+  display: flex;
+  justify-content: center;
+}
+.filter-input {
+  margin: 0 20px;
+}
+
+/* LISTA MESSAGGI */
+.messages-list {
+  padding: 0px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  /* overflow-y: scroll; */
+  gap: 20px;
+}
+
+.messageCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 5px double #009788;
+  border-radius: 8px;
+  padding: 0 20px;
+  height: 100px;
+  gap: 5px;
+}
+
+.messageCard p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 0;
+  border-bottom: 1px solid #00978861;
+}
+
+.messageCard p:nth-of-type(3) {
+  border: none;
+  align-self: end;
+  font-size: 12px;
+}
+.empty {
+  width: 100%;
+  background: lightyellow;
+}
+
+/* GALLERY */
+.main-gallery {
+  background-color: #009788;
+  text-align: center;
+}
+.main-gallery h2 {
+  color: #e0f2f2;
+}
+
+.photo-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.photo-gallery img {
+  border-radius: 20px;
+}
+/* MEDIA QUERY */
+
+@media only screen and (min-width: 767px) {
+  body {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .friends {
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding-top: 30px;
+    width: 25%;
+  }
+
+  .add-new-message {
+    background-color: #009788;
+    padding-bottom: 20px;
+  }
+  .messages {
+    width: 33%;
+    flex-grow: 1;
+  }
+
+  .add-new-message-btn {
+    background-color: #e0f2f2;
+    color: #009788;
+  }
+  .main-gallery {
+    padding: 10px;
+  }
+  .photo-gallery {
+    flex-direction: column;
+    margin-left: 18px;
+    width: 25%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .friendCard {
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 0;
+    width: 80%;
+    height: 150px;
+  }
+  .friends img {
+    width: 30%;
+    padding: 10px;
+  }
+
+  .friends p {
+    font-size: 23px;
+  }
+}
