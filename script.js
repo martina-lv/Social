@@ -57,8 +57,7 @@ addMsgBtn.addEventListener("click", () => {
           createMessageEl(messagesListEl, text, sender, date, id)
         );
     })
-    .then((inputSender.value = ""))
-    .then((inputTextEl.value = ""));
+    .then(((inputSender.value = ""), (inputTextEl.value = "")));
 });
 
 filterInput.addEventListener("input", (e) => {
