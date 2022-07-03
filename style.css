@@ -5,7 +5,38 @@ body {
   scroll-behavior: smooth;
 }
 
-body {
+li {
+  list-style: none;
+  color: #e0f2f2;
+  font-size: large;
+}
+hr {
+  margin: 0;
+  background-color: #e0f2f2;
+  height: 0.5px;
+}
+
+input {
+  border-color: #009788;
+}
+#logo-1 {
+  padding-left: 10px;
+}
+.main-header {
+  background-color: #009788;
+}
+.main-navbar {
+  display: flex;
+}
+
+.main-menu {
+  display: flex;
+  gap: 20px;
+  height: 30px;
+  margin: 0;
+}
+
+.main-section {
   display: flex;
   flex-direction: column;
 }
@@ -18,7 +49,7 @@ body {
   gap: 20px;
   width: 100%;
   background: #009788;
-  padding: 10px 0;
+  padding: 20px 0;
 }
 
 .friends img {
@@ -117,9 +148,14 @@ body {
 .main-gallery {
   background-color: #009788;
   text-align: center;
+  margin-bottom: 60px;
 }
 .main-gallery h2 {
   color: #e0f2f2;
+}
+.main-gallery img {
+  height: 100px;
+  width: 150px;
 }
 
 .photo-gallery {
@@ -136,8 +172,7 @@ body {
 /* MEDIA QUERY */
 
 @media only screen and (min-width: 767px) {
-  body {
-    display: flex;
+  .main-section {
     flex-direction: row;
   }
 
