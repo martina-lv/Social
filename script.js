@@ -49,15 +49,16 @@ addMsgBtn.addEventListener("click", () => {
         .querySelectorAll(".messageCard")
         .forEach((message) => message.remove())
   );
-  GET("https://edgemony-backend.herokuapp.com/messages").then(
-    (messagesList) => {
+  GET("https://edgemony-backend.herokuapp.com/messages")
+    .then((messagesList) => {
       messagesList
         .reverse()
         .map(({ text, sender, date, id }) =>
           createMessageEl(messagesListEl, text, sender, date, id)
         );
-    }
-  );
+    })
+    .then((inputSender.value = ""))
+    .then((inputTextEl.value = ""));
 });
 
 filterInput.addEventListener("input", (e) => {

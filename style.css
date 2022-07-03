@@ -2,7 +2,7 @@ html,
 body {
   margin: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth;
+  /* overflow: hidden; */
 }
 
 li {
@@ -113,7 +113,6 @@ input {
   display: flex;
   flex-direction: column;
   flex: 1;
-  /* overflow-y: scroll; */
   gap: 20px;
 }
 
@@ -139,16 +138,11 @@ input {
   align-self: end;
   font-size: 12px;
 }
-.empty {
-  width: 100%;
-  background: lightyellow;
-}
 
 /* GALLERY */
 .main-gallery {
   background-color: #009788;
   text-align: center;
-  margin-bottom: 60px;
 }
 .main-gallery h2 {
   color: #e0f2f2;
@@ -172,6 +166,15 @@ input {
 /* MEDIA QUERY */
 
 @media only screen and (min-width: 767px) {
+  svg {
+    align-self: start;
+  }
+  .main-header {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+
   .main-section {
     flex-direction: row;
   }
